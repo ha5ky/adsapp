@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../bt/css/bootstrap.min.css" />
+		<style type="text/css">
+			.ava {
+				width: 100px;
+				height: 100px;
+				margin-top: 10%;
+				margin-left: 10%;
+			}
+			
+			.bvb {
+				margin-top: 10%;
+			}
+			
+			.cvc {
+				padding-left: 18% !important;
+			}
+		</style>
+	</head>
+
+	<body>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">我的</h1>
+		</header>
+		<img class="img-circle img-responsive ava active" src="../image/a.jpg" style="margin-top: 30%;"/>
+		<form class="mui-input-group bvb">
+			<div class="mui-input-row">
+				<label class="cvc">昵称</label>
+				<input type="text" class="mui-input-clear" placeholder="请输入昵称">
+			</div>
+			<div class="mui-input-row">
+				<label class="cvc">账户</label>
+				<input type="text" class="mui-input-clear" placeholder="请输入账号/手机号">
+			</div>
+			<div class="mui-input-row">
+				<label class="cvc">姓名</label>
+				<input type="text" class="mui-input-clear" placeholder="请输入真实姓名">
+			</div>
+			<div class="mui-input-row">
+				<label class="cvc">生日</label>
+				<input type="text" class="mui-input-clear" placeholder="请输入您的生日">
+			</div>
+			<div class="mui-input-row">
+				<label class="cvc">性别</label>
+				<input type="text" class="mui-input-clear" placeholder="请输入性别">
+			</div>
+			<div class="col-sm-6" style="margin-top: 15%;">
+				<button type="button" class="mui-btn mui-btn-primary" id="login" style="width: 100%;">确定</button>
+			</div>
+		</form>
+
+	</body>
+
+</html>

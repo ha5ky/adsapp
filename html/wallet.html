@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../bt/css/bootstrap.min.css" />
+		<script src="https://img.hcharts.cn/highcharts/highcharts.js"></script>
+		<!--<script src="https://img.hcharts.cn/highcharts/modules/exporting.js"></script>-->
+		<script src="https://img.hcharts.cn/highcharts/modules/variable-pie.js"></script>
+		<style type="text/css">
+			.ava {
+				width: 100px;
+				height: 100px;
+				margin-top: 20%;
+			}
+			
+			.qaq {
+				margin-top: 20%;
+			}
+			
+			.bvb {
+				margin-top: 15%;
+			}
+			.pullrighttext{
+				text-align: right;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+		<header class="mui-bar mui-bar-nav">
+			<!--<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>-->
+			<h1 class="mui-title">钱包</h1>
+		</header>
+		<div class="qaq">
+			<div class="text-center">
+				<div id="" style="color: #808080;">
+					总金额
+				</div>
+				<!--<div class="row">-->
+				<span id="" style="font-size: 50px;">
+						<img src="../image/rmb.png" style="height: 35px;" />
+						520
+					</span>
+				<!--</div>-->
+			</div>
+		</div>
+
+		<div id="container" style="width: 100;"></div>
+		<script type="text/javascript">
+			// 基于准备好的dom，初始化echarts实例
+			Highcharts.chart('container', {
+				chart: {
+					type: 'variablepie'
+				},
+				title: {
+					text: ''
+				},
+				subtitle: {
+					text: ''
+				},
+				credits: {
+					enabled: false
+				},
+				tooltip: {
+					headerFormat: '',
+					pointFormat: ''
+				},
+				series: [{
+					minPointSize: 10,
+					innerSize: '20%',
+					zMin: 0,
+					name: 'countries',
+					data: [{
+						name: '餐饮',
+						y: 505370,
+						z: 92.9
+					}, {
+						name: '旅游',
+						y: 551500,
+						z: 118.7
+					}, {
+						name: '娱乐',
+						y: 312685,
+						z: 124.6
+					}, {
+						name: '电影院',
+						y: 78867,
+						z: 137.5
+					}, {
+						name: '运动',
+						y: 301340,
+						z: 201.8
+					}, {
+						name: '电子产品',
+						y: 41277,
+						z: 214.5
+					}, {
+						name: '装饰',
+						y: 357022,
+						z: 235.6
+					}]
+				}]
+			});
+		</script>
+		<form class="mui-input-group">
+			<div class="mui-input-row">
+				<label class="cvc">昨日收益</label>
+				<input type="text" class="mui-input-clear pullrighttext" value="¥ 20" placeholder="" readonly="">
+			</div>
+			<div class="mui-input-row">
+				<label class="cvc">累计收益</label>
+				<input type="text" class="mui-input-clear pullrighttext" value="¥ 20" placeholder="" readonly="">
+			</div>
+			<div class="mui-input-row">
+				<label class="cvc">详单</label>
+				<input type="text" class="mui-input-clear pullrighttext" value="¥ 20" placeholder="" readonly="">
+			</div>
+			<div class="mui-input-row">
+				<label class="cvc">支付方式</label>
+				<input type="text" class="mui-input-clear pullrighttext" value="微信" placeholder="" readonly="">
+			</div>
+		</form>
+	</body>
+
+</html>

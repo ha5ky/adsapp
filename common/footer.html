@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../css/footer.css" />
+		<link rel="stylesheet" type="text/css" href="../bt/css/bootstrap.min.css" />
+		<script src="../js/iconfont.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<nav class="mui-bar mui-bar-tab" id="nav">
+			<a class="mui-tab-item mui-active" id="ad">
+				<span class="mui-icon">
+					<svg class="icon" aria-hidden="true">
+						<use xlink:href="#icon-ads-palace"></use>
+					</svg>
+				</span>
+				<span class="mui-tab-label">广场</span>
+			</a>
+			<a class="mui-tab-item" id="collection">
+				<span class="mui-icon">
+					<svg class="icon" aria-hidden="true">
+						<use xlink:href="#icon-ads-like"></use>
+					</svg>
+				</span>
+				<span class="mui-tab-label">收藏</span>
+			</a>
+			<a class="mui-tab-item" id="my">
+				<span class="mui-icon">
+					<svg class="icon" aria-hidden="true">
+						<use xlink:href="#icon-ads-my"></use>
+					</svg>
+				</span>
+				<span class="mui-tab-label">我的</span>
+			</a>
+		</nav>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init({
+				subpages: [ //先加载首页
+					{
+						url: '../html/ad.html',
+						id: 'details',
+						styles: {
+							top: '5px',
+							bottom: '50px'
+						}
+					}
+				]
+//				preloadPages:[
+//					{
+//						url: '../html/collection.html',
+//						id: 'collection.html',
+//						styles: {
+//							top: '5px',
+//							bottom: '50px'
+//						}
+//					},
+//					{
+//						url: '../html/my.html',
+//						id: 'my.html',
+//						styles: {
+//							top: '5px',
+//							bottom: '50px'
+//						}
+//					}
+//				]
+			});
+			mui.plusReady(function() {
+//				console.log("当前页面URL：" + plus.webview.currentWebview().getURL());
+				//给标签为 mine 的元素（也就是我们的我的 tab ）添加 tap 事件，这里由于 click 的延迟太高，故用 tap 事件。
+				document.getElementById("ad").addEventListener('tap', function() {
+					//获取到当前的 webview 根据标签也就是下面定义的子页面 id
+					var cur = plus.webview.getWebviewById("details");
+					//判断是否是此页面
+					if(cur.getURL() != "../html/ad.html") {
+						//不是就要切换页面为当前 tab 是指向的页面
+//						console.log("显示我的");
+						cur.loadURL("../html/ad.html");
+					}
+				});
+
+				document.getElementById("collection").addEventListener('tap', function() {
+					var cur = plus.webview.getWebviewById("details");
+					if(cur.getURL() != "../html/collection.html") {
+//						console.log("显示我的");
+						cur.loadURL("../html/collection.html");
+					}
+				});
+
+				document.getElementById("my").addEventListener('tap', function() {
+					var cur = plus.webview.getWebviewById("details");
+					if(cur.getURL() != "../html/my.html") {
+//						console.log("显示我的");
+						cur.loadURL("../html/my.html");
+					}
+				});
+			});
+		</script>
+		
+	</body>
+
+</html>

@@ -1,0 +1,98 @@
+{
+	"index.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"bt/css/bootstrap.min.css",
+			"image/a.jpg"
+		],
+		"refer": []
+	},
+	"html/index.html": {
+		"resources": [
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"bt/css/bootstrap.min.css",
+			"image/a.jpg",
+			"common/footer.html"
+		],
+		"refer": [
+			"common/footer.html"
+		]
+	},
+	"common/footer.html": {
+		"resources": [
+			"js/iconfont.js",
+			"css/footer.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/iconfont.css",
+			"css/mui.min.css",
+			"bt/css/bootstrap.min.css",
+			"html/ad.html",
+			"html/index.html"
+		],
+		"refer": [
+			"html/ad.html",
+			"html/my.html",
+			"html/collection.html",
+			"html/index.html"
+		]
+	},
+	"html/ad.html": {
+		"resources": [
+			"image/e.png",
+			"image/b.png",
+			"bt/fonts/glyphicons-halflings-regular.woff2",
+			"image/d.png",
+			"css/mui.min.css",
+			"bt/css/bootstrap.min.css",
+			"image/c.png",
+			"js/mui.min.js",
+			"html/title.html"
+		],
+		"refer": [
+			"html/title.html"
+		]
+	},
+	"html/my.html": {
+		"resources": [
+			"image/a.jpg",
+			"js/mui.min.js",
+			"bt/fonts/glyphicons-halflings-regular.woff2",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"bt/css/bootstrap.min.css",
+			"html/wallet.html"
+		],
+		"refer": [
+			"html/wallet.html"
+		]
+	},
+	"html/collection.html": {
+		"resources": [
+			"bt/fonts/glyphicons-halflings-regular.woff2",
+			"image/e.png",
+			"image/b.png",
+			"image/d.png",
+			"image/c.png"
+		]
+	},
+	"html/wallet.html": {
+		"resources": [
+			"image/rmb.png",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"bt/css/bootstrap.min.css",
+			"js/echarts.js",
+			"js/highcharts.js"
+		]
+	},
+	"html/title.html": {
+		"resources": [
+			"fonts/mui.ttf"
+		]
+	}
+}

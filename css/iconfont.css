@@ -1,0 +1,19 @@
+
+@font-face {font-family: "iconfont";
+  src:url('../fonts/iconfont.ttf') format('truetype');
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-ads-palace:before { content: "\e66f"; font-size: larger;color: #FFFFFF;}
+
+.icon-ads-my:before { content: "\e671";  font-size: larger;}
+
+.icon-ads-like:before { content: "\e670";  font-size: larger;}
+
