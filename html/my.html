@@ -24,31 +24,44 @@
 		<script src="../js/mui.min.js"></script>
 		<script type="text/javascript">
 			mui.init({
-				
+
 			});
 		</script>
-		
+
 		<div class="mui-row" style="margin-top: 10%;">
 			<img class="img-circle img-responsive center-block ava" src="../image/a.jpg" />
 		</div>
-		<form class="inptst" action="" method="post">
-			<div class="qaq">
-				<ul class="mui-table-view">
-					<li class="mui-table-view-cell">
-						<a class="mui-navigate-right" href="../html/wallet.html">我的钱包</a>
-					</li>
-					<li class="mui-table-view-cell">
-						<a class="mui-navigate-right" href="#">浏览记录</a>
-					</li>
-					<li class="mui-table-view-cell">
-						<a class="mui-navigate-right" href="#">客服</a>
-					</li>
-					<li class="mui-table-view-cell">
-						<a class="mui-navigate-right" href="#">我们</a>
-					</li>
-				</ul>
-			</div>
-		</form>
+		<div class="qaq">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell" id="wallet">
+					<span class="mui-navigate-right">我的钱包</span>
+				</li>
+				<li class="mui-table-view-cell" id="browse">
+					<span class="mui-navigate-right">浏览记录</span>
+				</li>
+				<li class="mui-table-view-cell" id="kefu">
+					<span class="mui-navigate-right">客服</span>
+				</li>
+				<li class="mui-table-view-cell" id="us">
+					<span class="mui-navigate-right">我们</span>
+				</li>
+			</ul>
+		</div>
+		<script type="text/javascript">
+			mui('.mui-table-view').on('tap','#wallet',function(){
+				mui.openWindow({
+					url: '../html/wallet.html',
+					id: 'wallet.html'
+				})
+			})
+			mui('.mui-table-view').on('tap','#browse',function(){
+				mui.openWindow({
+					url: '../html/content.html',
+					id: 'content.html'
+				})
+			})
+			
+		</script>
 	</body>
 
 </html>

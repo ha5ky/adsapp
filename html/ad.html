@@ -48,14 +48,32 @@
 						contentrefresh: '正在加载...',
 						callback: pullupRefresh
 					}
-				}
+				},
+
 			});
+			window.setTimeout(function() {
+				mui('#map').on('tap', '#positionmap',function() {
+					//打开关于页面
+					mui.openWindow({
+						url: '../html/position.html',
+						id: 'position.html'
+					});
+				});
+			}, 500);
+			window.setTimeout(function() {
+				mui('.panel-body').on('tap', '#leaflet',function() {
+					//打开关于页面
+					mui.openWindow({
+						url: '../html/title.html',
+						id: 'title.html'
+					});
+				});
+			}, 500);
 			/**
 			 * 下拉刷新具体业务实现
 			 */
 			function pulldownRefresh() {
 				setTimeout(function() {
-					
 					mui('#pullrefresh').pullRefresh().endPulldownToRefresh(); //refresh completed
 				}, 1500);
 			}
@@ -66,38 +84,40 @@
 			function pullupRefresh() {
 				setTimeout(function() {
 					mui('#pullrefresh').pullRefresh().endPullupToRefresh((++count > 2)); //参数为true代表没有更多数据了。
-					
+
 				}, 1500);
 			}
 		</script>
-		<div class="panel-heading" id="pulldown">
-			<h2 class="panel-heading">广场<span class="glyphicon glyphicon-map-marker mui-pull-right" style="color:#459df5;"></span><br /><small style="font-size: 12px;color: #929090;">浏览领取红包</small><hr /></h2>
-
+		<div class="panel-heading" id="map">
+			<h2 class="panel-heading">广场
+				<span id="positionmap" class="glyphicon glyphicon-map-marker mui-pull-right" style="color:#459df5;"></span>
+				<br />
+				<small style="font-size: 12px;color: #929090;">浏览领取红包</small>
+				<hr />
+			</h2>
 		</div>
-		<div class="panel-body toppx">
-			<a href="../html/title.html" id="pullrefresh">
-				<div class="mui-card" style=" border-radius: 13px;box-shadow:0 0 9px 1px #929090;">
-					<!--页眉，放置标题-->
-					<div class="mui-card-header" style="color:#929090; font-size: 14px;">发布者：东哲烤肉</div>
-					<!--内容区-->
-					<div class="mui-card-content back">
-						<img class="back" src="../image/e.png">
-					</div>
-					<!--页脚，放置补充信息或支持的操作-->
-					<div class="mui-card-footer">
-						<div class="col-sm-5">
-							<div class="rule">
-								<div class="row"><span class="glyphicon glyphicon-apple">红包剩余：9个</span></div>
-								<div class="row"><span class="glyphicon glyphicon-camera">金额剩余：29元</span></div>
-								<div class="" style="#common_box{    left:0; }#cli_on{      float:right; }">
-									吃喝玩乐到xx，星级享受折上折。 好吃又美味，健康又实惠。 香飘二十里，美味店中来。 xx真情回馈老顾客，大刀阔斧最低价。 最佳口味最优服务，本店为您倾情奉献。
-								</div>
+		<div class="panel-body toppx" id="pullrefresh" >
+			<div class="mui-card" style=" border-radius: 13px;box-shadow:0 0 9px 1px #929090;" id="leaflet">
+				<!--页眉，放置标题-->
+				<div class="mui-card-header" style="color:#929090; font-size: 14px;">发布者：东哲烤肉</div>
+				<!--内容区-->
+				<div class="mui-card-content back">
+					<img class="back" src="../image/e.png">
+				</div>
+				<!--页脚，放置补充信息或支持的操作-->
+				<div class="mui-card-footer">
+					<div class="col-sm-5">
+						<div class="rule">
+							<div class="row"><span class="glyphicon glyphicon-apple">红包剩余：9个</span></div>
+							<div class="row"><span class="glyphicon glyphicon-camera">金额剩余：29元</span></div>
+							<div class="" style="#common_box{    left:0; }#cli_on{      float:right; }">
+								吃喝玩乐到xx，星级享受折上折。 好吃又美味，健康又实惠。 香飘二十里，美味店中来。 xx真情回馈老顾客，大刀阔斧最低价。 最佳口味最优服务，本店为您倾情奉献。
 							</div>
-							<hr class="line" />
 						</div>
+						<hr class="line" />
 					</div>
 				</div>
-			</a>
+			</div>
 		</div>
 		<div class="panel-body toppx">
 			<div class="mui-card" style=" border-radius: 13px;box-shadow:0 0 9px 1px #929090;">

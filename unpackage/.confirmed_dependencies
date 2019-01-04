@@ -15,7 +15,10 @@
 			"css/mui.min.css",
 			"bt/css/bootstrap.min.css",
 			"image/a.jpg",
-			"common/footer.html"
+			"common/footer.html",
+			"js/mui.min.js",
+			"image/1111.jpg",
+			"image/1111.png"
 		],
 		"refer": [
 			"common/footer.html"
@@ -53,7 +56,8 @@
 			"html/title.html"
 		],
 		"refer": [
-			"html/title.html"
+			"html/title.html",
+			"html/position.html"
 		]
 	},
 	"html/my.html": {
@@ -64,10 +68,12 @@
 			"fonts/mui.ttf",
 			"css/mui.min.css",
 			"bt/css/bootstrap.min.css",
-			"html/wallet.html"
+			"html/wallet.html",
+			"html/content.html"
 		],
 		"refer": [
-			"html/wallet.html"
+			"html/wallet.html",
+			"html/content.html"
 		]
 	},
 	"html/collection.html": {
@@ -76,7 +82,10 @@
 			"image/e.png",
 			"image/b.png",
 			"image/d.png",
-			"image/c.png"
+			"image/c.png",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"bt/css/bootstrap.min.css"
 		]
 	},
 	"html/wallet.html": {
@@ -92,7 +101,75 @@
 	},
 	"html/title.html": {
 		"resources": [
-			"fonts/mui.ttf"
+			"fonts/mui.ttf",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"bt/css/bootstrap.min.css",
+			"bt/fonts/glyphicons-halflings-regular.woff2",
+			"image/d.png"
+		],
+		"refer": [
+			"common/footer.html",
+			"html/camera.html",
+			"html/moneylist.html"
+		]
+	},
+	"html/positon.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"bt/css/bootstrap.min.css",
+			"common/footer.html"
+		],
+		"refer": [
+			"common/footer.html"
+		]
+	},
+	"html/position.html": {
+		"resources": [
+			"css/mui.min.css",
+			"bt/css/bootstrap.min.css",
+			"common/footer.html",
+			"js/mui.min.js"
+		],
+		"refer": [
+			"common/footer.html"
+		]
+	},
+	"html/camera.html": {
+		"resources": [
+			"js/common.js",
+			"css/common.css",
+			"js/immersed.js",
+			"css/mui.min.css",
+			"bt/css/bootstrap.min.css",
+			"js/mui.js"
+		]
+	},
+	"html/content.html": {
+		"resources": [
+			"bt/fonts/glyphicons-halflings-regular.woff2",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"bt/css/bootstrap.min.css"
+		]
+	},
+	"html/moneylist.html": {
+		"resources": [
+			"js/mui.min.js",
+			"money/img/money.png",
+			"css/mui.min.css",
+			"bt/css/bootstrap.min.css",
+			"image/a.jpg"
+		]
+	},
+	"html/guide.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css"
+		],
+		"refer": [
+			"html/index.html"
 		]
 	}
 }
